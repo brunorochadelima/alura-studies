@@ -1,10 +1,10 @@
-import React from "react";
-import Botao from "./components/botão";
+import React from 'react';
+import Formulario from './components/formulário';
 
 function App() {
   return (
     <div className="App">
-      <Botao />
+      <Formulario/>
     </div>
   );
 }
