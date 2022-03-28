@@ -1,5 +1,4 @@
 import React from "react";
-import "../lista/style.scss"
 import style from "../lista/Lista.module.scss";
 
 function lista() {
