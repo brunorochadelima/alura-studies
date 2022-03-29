@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "../lista/Lista.module.scss";
 import Item from "./Item";
 
-function lista() {
-  const tarefas = [
+function Lista() {
+  const [tarefas, setTarefas] = useState([
     {
       tarefa: "React",
       tempo: "02:00:00",
@@ -16,11 +16,11 @@ function lista() {
       tarefa: "Typescript",
       tempo: "01:00:00",
     },
-  ];
+  ]);
 
   return (
     <aside className={style.listaTarefas}>
-      <h2> Estudos do dia </h2>
+      <h2 onClick={() => {setTarefas([...tarefas, {tarefa: 'estudar estado', tempo: '02:00:00'}])}}> Estudos do dia </h2>
       <ul>
         {tarefas.map((item, index) => (
           <Item key={index} {...item} />
@@ -30,4 +30,4 @@ function lista() {
   );
 }
 
-export default lista;
+export default Lista;
