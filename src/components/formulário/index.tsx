@@ -1,9 +1,11 @@
 import React from "react";
+import { ITarefa } from "../../types/tarefa";
 import Botao from "../botão";
 import style from "../formulário/Formulario.module.scss"
 
-class Formulario extends React.Component {
-  // em class componentes o state deve vir antes do render
+class Formulario extends React.Component <{
+  setTarefas: React.Dispatch<React.SetStateAction<ITarefa[]>>
+}>{
   state = { 
     tarefa: "",
     tempo: "00:00"
@@ -11,8 +13,8 @@ class Formulario extends React.Component {
 
   adicionarTarefa(evento: React.FormEvent) {
     evento.preventDefault();
-    console.log('state: ', this.state);
-  }
+    this.props.setTarefas(tarefasAntigas => [...tarefasAntigas, {...this.state}])
+    }
 
 
   render() {
