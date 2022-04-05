@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import style from "../pages/App.module.scss";
 import "../pages/reset.scss";
 import { ITarefa } from "../../types/tarefa";
-import { tempoParaSegundos } from "../../common/utils/time";
 
 function App() {
   const [tarefas, setTarefas] = useState<ITarefa[] | []>([]);
