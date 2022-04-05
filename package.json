@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@types/uuid": "^8.3.4",
-    "sass": "^1.49.9",
+    "sass": "^1.49.11",
     "typescript-plugin-css-modules": "^3.4.0"
   }
 }
